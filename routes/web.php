@@ -21,3 +21,11 @@ Route::get('todos', 'TodosController@index')->name('todos');
 Route::get('todos/{todo}', 'TodosController@show');
 Route::get('new-todos', 'TodosController@create')->name('create');
 Route::post('store-todos', 'TodosController@store')->name('store');
+
+Route::get('todos/{todo}/edit', 'TodosController@edit');
+
+Route::post('todos/{todo}/update-todo', 'TodosController@update')->name('update');
+
+Route::get('todos/{todo}/delete', 'TodosController@destroy');
+
+Route::get('todos/{todo}/complete', 'TodosController@complete');
